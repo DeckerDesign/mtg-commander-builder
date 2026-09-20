@@ -1,0 +1,26 @@
+# ============================================================
+# PACKAGE: removal — targeted removal, bounce, and board wipes.
+# ============================================================
+
+cards:
+  # Targeted instant/sorcery
+  - Cyclonic Rift            # overloaded = one-sided board wipe
+  - Beast Within             # any permanent; gives them a 3/3
+  - Rapid Hybridization      # creature; gives them a 3/3 frog lizard
+  - Pongify                  # creature; gives them a 3/3 ape
+  - Krosan Grip              # artifact or enchantment; split second
+  - Nature's Claim           # artifact or enchantment; opponent gains 4
+  # Bounce
+  - Unsubstantiate           # instant; returns creature or spell
+  - Evacuation               # all creatures to hands (can be one-sided with timing)
+  # Creature-based removal
+  - Reclamation Sage         # ETB: destroy artifact or enchantment
+  - Acidic Slime             # ETB: destroy artifact, enchantment, or land (utility land OK)
+  # Graveyard hate
+  - Bojuka Bog               # land: exile target player's graveyard on ETB
+  - Crypt Incursion          # instant; exile all creature cards from a graveyard
+
+notes: >
+  Target 8+ removal slots. Cyclonic Rift is the best card in the slot; always include it
+  for blue decks. Prioritize instant-speed removal. At least 1-2 graveyard hate pieces
+  per deck meta (Bojuka Bog counts as a land, so it's nearly free to include).

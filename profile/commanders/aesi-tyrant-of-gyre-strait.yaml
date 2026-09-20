@@ -1,0 +1,122 @@
+# ============================================================
+# COMMANDER OVERLAY: Aesi, Tyrant of Gyre Strait
+# EXAMPLE DATA. Shows the shape a real commander overlay takes.
+# ============================================================
+
+name: "Aesi, Tyrant of Gyre Strait"
+scryfall_id: "73b40006-9acc-4e52-8591-3e5abd6a7c23"
+color_identity: [U, G]
+colors: [U, G]
+type_line: "Legendary Creature — Serpent"
+cmc: 6
+archetype: landfall_combo
+default_power_level: 7
+
+# Strategy: ramp aggressively with extra land drops, draw cards with Aesi on every
+# land play, then close through board dominance (tokens + Craterhoof) or a Scapeshift.
+strategy: >
+  Play as many lands per turn as possible — Aesi draws a card each time. Stack extra
+  land-drop effects (Exploration, Burgeoning, Oracle of Mul Daya) to generate 3-4 draws
+  per turn cycle by mid-game. Win through landfall token generation (Scute Swarm,
+  Avenger of Zendikar) swinging with Craterhoof, or through the Scapeshift + Field of
+  the Dead combo (not infinite, just very powerful).
+
+# Cards that exist specifically because Aesi is the commander (synergy package)
+synergy_cards:
+  - Amulet of Vigor          # untaps lands that enter tapped; combos with bounce lands
+  - Lotus Cobra              # landfall: add one mana of any color
+  - Tatyova, Benthic Druid   # additional "draw on land drop" trigger
+  - Meloku the Clouded Mirror # bounce islands to hand and replay them for card draws
+  - Retreat to Coralhelm     # landfall: untap a creature (combos with Sakura-Tribe Scout)
+  - Sakura-Tribe Scout       # activated: put a land into play (pairs with Retreat)
+  - Stone-Seeder Hierophant  # landfall: untap target land (ramp engine)
+  - Patron of Moonfolk       # return a land on commander spell cast; tribal synergy
+  - Ramunap Excavator        # plays lands from graveyard (pairs with fetch lands + cycle lands)
+  - Crucible of Worlds       # same effect as Ramunap Excavator but artifact
+
+# Cards explicitly NOT appropriate for this commander (override any package suggestion)
+do_not_include:
+  - Valakut, the Molten Pinnacle  # out of color identity (red mana requirement)
+  - Blood Moon                    # out of color identity
+
+# Default package overrides (commander-specific card selections from packages)
+defaults:
+  ramp:
+    - Sol Ring
+    - Arcane Signet
+    - Simic Signet
+    - Nature's Lore
+    - Three Visits
+    - Farseek
+    - Harrow
+    - Cultivate
+    - Kodama's Reach
+    - Skyshroud Claim
+    - Explore
+    - Oracle of Mul Daya
+    - Azusa, Lost but Seeking
+    - Wayward Swordtooth
+    - Exploration
+    - Burgeoning
+  draw:
+    - Rhystic Study
+    - Sylvan Library
+    - Mystic Remora
+    - Tireless Tracker
+    - Horn of Greed
+    - Life from the Loam
+    - Abundance
+  removal:
+    - Cyclonic Rift
+    - Beast Within
+    - Rapid Hybridization
+    - Pongify
+    - Krosan Grip
+    - Reclamation Sage
+    - Acidic Slime
+    - Bojuka Bog
+  protection:
+    - Counterspell
+    - Swan Song
+    - Negate
+    - Swiftfoot Boots
+    - Heroic Intervention
+  wincons:
+    - Avenger of Zendikar
+    - Rampaging Baloths
+    - Scute Swarm
+    - Craterhoof Behemoth
+    - Scapeshift
+    - Splendid Reclamation
+    - Storm Cauldron
+
+# Default land base (36 lands for this build)
+default_lands:
+  - Command Tower
+  - Hinterland Harbor
+  - Breeding Pool
+  - Tropical Island
+  - Yavimaya Coast
+  - Barkchannel Pathway
+  - Flooded Grove
+  - Rejuvenating Springs
+  - Waterlogged Grove
+  - Dreamroot Cascade
+  - Misty Rainforest
+  - Wooded Foothills
+  - Windswept Heath
+  - Alchemist's Refuge
+  - Boseiju, Who Endures
+  - Reliquary Tower
+  - Field of the Dead
+  - Mosswort Bridge
+  - Simic Growth Chamber       # bounce land — combos with Amulet of Vigor
+  - Guildless Commons          # bounce land — same
+  - Radiant Fountain
+  - 8x Forest
+  - 7x Island
+
+# Required cards (always included regardless of package selection)
+required_cards:
+  - Sol Ring
+  - Command Tower

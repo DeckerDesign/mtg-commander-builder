@@ -1,0 +1,27 @@
+# ============================================================
+# PACKAGE: wincons — game-ending threats and finishers.
+# Per pilot's power-level notes: NO infinite combos. Win through overwhelming
+# board position or a single large spell.
+# ============================================================
+
+cards:
+  # Mass token + pump
+  - Avenger of Zendikar      # enters with X 0/1 plant tokens (X = lands); landfall pumps them
+  - Rampaging Baloths        # landfall: create 4/4 beast tokens
+  - Scute Swarm              # landfall: exponential token generation (6+ lands)
+  # Game-ending spells
+  - Craterhoof Behemoth      # all your creatures get +X/+X and trample until EoT
+  - Overwhelming Stampede    # same effect, sorcery
+  - Finale of Devastation    # X=10: get a creature + Craterhoof effect
+  # Land-based wins
+  - Scapeshift               # sacrifice all lands; put any lands onto battlefield
+  - Splendid Reclamation     # return all lands from graveyard to battlefield
+  # Denial/inevitability
+  - Storm Cauldron           # returns a land to each player's hand each turn; pairs with
+                              # extra-land-drop effects to bounce/replay at will
+
+notes: >
+  Target 3-5 win-con slots. For landfall builds, token generators + Craterhoof or
+  Finale of Devastation are the primary lines. Scapeshift is strong but situational
+  (needs Field of the Dead or Valakut, the Molten Pinnacle — the latter is out of UG
+  color identity). Storm Cauldron is a "soft lock" that snowballs with extra land drops.

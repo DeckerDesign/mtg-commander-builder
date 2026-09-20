@@ -1,0 +1,25 @@
+# ============================================================
+# LAYOUT — deck construction contract + export config.
+# This is Profile config: the Engine hardcodes none of it. Edit to fit YOUR preferences.
+# ============================================================
+
+deck_size: 100       # always 100 in Commander
+land_count_target: 36  # baseline; adjust per commander (ramp-heavy = fewer lands)
+
+# Target minimum card counts per package (soft checks — warnings, not failures)
+ramp_count_target: 10
+draw_count_target: 10
+removal_count_target: 8
+protection_count_target: 4
+wincon_count_target: 3
+
+# Curve ceiling for the average CMC of nonland cards (soft check)
+cmc_ceiling: 3.5
+
+# Budget soft cap — the engine warns if the acquisition list exceeds this (USD)
+budget_soft_cap: 500
+
+# Export formats written on `apply`
+export_formats:
+  - moxfield
+  - text

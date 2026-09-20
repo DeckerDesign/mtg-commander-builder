@@ -1,0 +1,42 @@
+# ============================================================
+# PACKAGE: ramp — mana acceleration and land fetch.
+# Cards here are vetted through intake + commander-grill. Organized by CMC.
+# Commander overlays may supplement or restrict this list.
+# ============================================================
+
+cards:
+  # 1 CMC
+  - Birds of Paradise
+  - Llanowar Elves
+  - Fyndhorn Elves
+  - Elvish Mystic
+  - Sol Ring
+  # 2 CMC
+  - Arcane Signet
+  - Simic Signet
+  - Nature's Lore
+  - Three Visits
+  - Farseek
+  - Harrow
+  - Explore
+  - Coiling Oracle
+  # 3 CMC
+  - Cultivate
+  - Kodama's Reach
+  - Rampant Growth
+  - Skyshroud Claim
+  - Solemn Simulacrum
+  - Springbloom Druid
+  # 4 CMC
+  - Spoils of Victory
+  - Peregrine Dyad
+  # Extra land-drop engines (higher CMC, high impact for landfall commanders)
+  - Oracle of Mul Daya        # 4 CMC — plays extra lands, reveals top of library
+  - Azusa, Lost but Seeking   # 3 CMC — 2 extra land drops per turn
+  - Wayward Swordtooth        # 3 CMC — 1 extra land drop
+  - Exploration               # 1 CMC — 1 extra land drop (enchantment)
+  - Burgeoning                # 1 CMC — extra land drops on opponents' turns
+
+notes: >
+  Prefer land-based ramp over mana rocks for landfall commanders (Aesi, Tatyova, etc.).
+  Sol Ring + Arcane Signet are always included regardless. Target 10+ ramp slots total.

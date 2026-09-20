@@ -1,0 +1,23 @@
+# Raw source material — personal, gitignored
+profile/sources/
+!profile/sources/.gitkeep
+
+# Scryfall local cache (auto-populated)
+.scryfall_cache/
+
+# Outputs inside deck records
+decks/*/output/*.txt
+decks/*/output/*.mox
+decks/*/output/*.dek
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,79 @@
+# ============================================================
+# CARDPOOL — cards the pilot owns, wants, or proxies.
+# EXAMPLE DATA (Alex Chen). Replace during onboarding.
+# The engine compares a resolved deck against this list to produce an acquisition
+# list and estimate real out-of-pocket cost.
+# ============================================================
+
+owned:
+  # Staples
+  - Sol Ring
+  - Arcane Signet
+  - Command Tower
+  - Rhystic Study
+  - Cyclonic Rift
+  - Beast Within
+  - Rapid Hybridization
+  - Pongify
+  - Sylvan Library
+  # Ramp
+  - Cultivate
+  - Kodama's Reach
+  - Farseek
+  - Nature's Lore
+  - Three Visits
+  - Skyshroud Claim
+  - Harrow
+  - Explore
+  # Draw
+  - Mystic Remora
+  - Tireless Tracker
+  - Horn of Greed
+  - Life from the Loam
+  # Synergy
+  - Amulet of Vigor
+  - Lotus Cobra
+  - Scute Swarm
+  - Rampaging Baloths
+  - Avenger of Zendikar
+  # Utility
+  - Simic Signet
+  - Solemn Simulacrum
+  - Reclamation Sage
+  - Acidic Slime
+  # Lands (non-proxy)
+  - Command Tower
+  - Hinterland Harbor
+  - Breeding Pool
+  - Yavimaya Coast
+  - Barkchannel Pathway
+  - Flooded Grove
+  - Rejuvenating Springs
+  - Reliquary Tower
+  - Field of the Dead
+  - Alchemist's Refuge
+  - Boseiju, Who Endures
+  - Waterlogged Grove
+  - Dreamroot Cascade
+  # Basics (always owned)
+  - Forest
+  - Island
+
+proxy:
+  # Expensive cards proxied at this table
+  - Tropical Island
+  - Misty Rainforest
+  - Wooded Foothills
+  - Windswept Heath
+  - Oracle of Mul Daya
+  - Exploration
+  - Burgeoning
+
+want:
+  # On the acquire list — not yet owned
+  - Azusa, Lost but Seeking
+  - Craterhoof Behemoth
+  - Scapeshift
+  - Splendid Reclamation
+  - Consecrated Sphinx
+  - Wayward Swordtooth

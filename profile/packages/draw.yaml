@@ -1,0 +1,30 @@
+# ============================================================
+# PACKAGE: draw — card draw and card advantage engines.
+# ============================================================
+
+cards:
+  # Enchantment engines
+  - Rhystic Study
+  - Sylvan Library
+  - Mystic Remora
+  # Creature-based draw
+  - Consecrated Sphinx
+  - Tireless Tracker
+  - Coiling Oracle
+  # Spell-based
+  - Brainstorm
+  - Ponder
+  - Preordain
+  - Mulldrifter
+  # Triggered / land-based (especially good for landfall commanders)
+  - Horn of Greed            # draws when any player plays a land
+  - Abundance                # replaces draws with land/nonland decisions
+  - Life from the Loam       # dredge to recover lands; pairs with Cycling lands
+  # Utility
+  - Teferi's Ageless Insight  # doubles Teferi planeswalker loyalty abilities (narrow)
+  - Jace, Wielder of Mysteries # draw until you win (narrow)
+
+notes: >
+  Target 10+ draw slots. Engines (Rhystic Study, Sylvan Library) are almost always
+  included for non-budget builds. For landfall commanders, the commander itself often
+  provides draw-on-land-drop, so this package can run leaner (7-8 slots).

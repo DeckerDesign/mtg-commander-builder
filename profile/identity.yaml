@@ -1,0 +1,27 @@
+# ============================================================
+# IDENTITY — who the pilot is + their meta context.
+# EXAMPLE DATA: fictional "Alex Chen". Replace with your own (the intake skill does this).
+# ============================================================
+pilot:
+  name: "ALEX CHEN"
+  preferred_platform: "Moxfield"   # Moxfield | Archidekt | MTGO | text
+  moxfield_username: "example-alex"
+
+meta:
+  playgroup_size: 4
+  typical_table_power: 7          # 1-10 scale of your usual table
+  format: commander
+  banned_list_source: scryfall    # scryfall (live) | local
+
+# The pilot's honest deck-building north star.
+# (Example — profile-grill helps you write your own.)
+positioning:
+  north_star: >
+    Value and synergy player who came up on Simic-style midrange. Enjoys drawing cards
+    and doing complicated things with the stack and land drops. Does not enjoy stax or
+    land destruction. Prefers decks that win through inevitability, not speed.
+  comfort_zone: >
+    Comfortable piloting mid-to-high complexity decks (lots of triggers, optional
+    decisions). Prefers a focused 7 over an unfocused 8.
+
+default_commander: aesi-tyrant-of-gyre-strait

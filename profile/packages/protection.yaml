@@ -1,0 +1,24 @@
+# ============================================================
+# PACKAGE: protection — counterspells, hexproof, indestructible effects.
+# ============================================================
+
+cards:
+  # Hard counters
+  - Counterspell
+  - Swan Song
+  - Negate
+  # Soft counters
+  - Arcane Denial            # draws 2 for the opponent; still a hard no
+  - Delay                    # suspend 3; buys time
+  # Commander protection
+  - Swiftfoot Boots          # equip: hexproof + haste; protects commander
+  - Lightning Greaves        # equip 0: shroud + haste; slightly worse (can't target own)
+  - Sylvan Safekeeper        # sacrifice a land to give target creature shroud
+  # Broad protection
+  - Heroic Intervention      # give all your permanents indestructible + hexproof
+  - Teferi's Protection      # phase out all your permanents + gain protection
+
+notes: >
+  Target 4+ protection slots. For commanders with high threat assessments (Rhystic Study,
+  Aesi), protecting the commander and key pieces is critical. Swiftfoot Boots is almost
+  always correct. Counterspells serve double duty as interaction.

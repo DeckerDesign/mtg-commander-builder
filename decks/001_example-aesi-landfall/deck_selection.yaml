@@ -1,0 +1,123 @@
+commander: aesi-tyrant-of-gyre-strait
+archetype: landfall_value
+power_level: 7
+power_level_fit: >
+  Strong (example). Landfall strategy fits Aesi naturally. Focused 7 — fast enough to
+  be threatening by turn 4-5, not so fast it dominates lower-power tables. No tutors,
+  no infinite combos.
+
+strategy_hook: >
+  Ramp to 6 mana for Aesi, stack extra-land-drop effects (Exploration, Burgeoning,
+  Oracle of Mul Daya) to draw 3-5 cards per turn cycle, then threaten through token
+  mass or Craterhoof. Storm Cauldron is the soft-lock: bounce lands back each turn and
+  replay them for additional Aesi triggers.
+
+packages:
+  ramp:
+    - Sol Ring
+    - Arcane Signet
+    - Simic Signet
+    - Nature's Lore
+    - Three Visits
+    - Farseek
+    - Harrow
+    - Cultivate
+    - Kodama's Reach
+    - Skyshroud Claim
+    - Explore
+    - Oracle of Mul Daya
+    - Azusa, Lost but Seeking
+    - Wayward Swordtooth
+    - Exploration
+    - Burgeoning
+  draw:
+    - Rhystic Study
+    - Sylvan Library
+    - Mystic Remora
+    - Tireless Tracker
+    - Horn of Greed
+    - Life from the Loam
+  removal:
+    - Cyclonic Rift
+    - Beast Within
+    - Rapid Hybridization
+    - Pongify
+    - Krosan Grip
+    - Reclamation Sage
+    - Acidic Slime
+    - Bojuka Bog
+  protection:
+    - Counterspell
+    - Swan Song
+    - Negate
+    - Swiftfoot Boots
+    - Heroic Intervention
+  wincons:
+    - Avenger of Zendikar
+    - Rampaging Baloths
+    - Scute Swarm
+    - Craterhoof Behemoth
+    - Scapeshift
+    - Splendid Reclamation
+    - Storm Cauldron
+
+synergy_cards:
+  - Amulet of Vigor
+  - Lotus Cobra
+  - Tatyova, Benthic Druid
+  - Meloku the Clouded Mirror
+  - Retreat to Coralhelm
+  - Sakura-Tribe Scout
+  - Stone-Seeder Hierophant
+  - Ramunap Excavator
+  - Crucible of Worlds
+  - Roil Elemental
+  - Abundance
+  - Coiling Oracle
+  - Wrenn and Seven
+  - Temur Sabertooth
+  - Kodama of the East Tree
+
+utility:
+  - Solemn Simulacrum
+  - Swiftfoot Boots
+  - Lightning Greaves
+  - Ghostly Flicker
+  - Eternal Witness
+  - Cultivator Colossus
+
+lands:
+  # Dual / utility lands (nonbasic — each counts once)
+  - Command Tower
+  - Hinterland Harbor
+  - Breeding Pool
+  - Tropical Island
+  - Yavimaya Coast
+  - Barkchannel Pathway
+  - Flooded Grove
+  - Rejuvenating Springs
+  - Waterlogged Grove
+  - Dreamroot Cascade
+  - Misty Rainforest
+  - Wooded Foothills
+  - Windswept Heath
+  - Alchemist's Refuge
+  - Boseiju, Who Endures
+  - Reliquary Tower
+  - Field of the Dead
+  - Mosswort Bridge
+  - Simic Growth Chamber
+  - Guildless Commons
+  - Arcane Lighthouse
+  # Basics — use "N Card Name" notation
+  - 8 Forest
+  - 8 Island
+
+gaps:
+  - "No dedicated artifact removal for fast mana (Collector Ouphe would fit but risks hitting own Arcane Signet)."
+  - "Light on instant-speed interaction below 3 CMC — opening hand quality matters for this deck."
+  - "Scapeshift line requires Field of the Dead on the battlefield — single point of failure for that win condition."
+
+screen:
+  verdict: build
+  budget_estimate: "$420 paper / $140 MTGO (without fetch lands)"
