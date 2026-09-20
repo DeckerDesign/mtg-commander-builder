@@ -69,7 +69,7 @@ That's it. No database, no other installs. The engine fetches Scryfall and EDHRE
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/mtg-commander-builder.git
+git clone https://github.com/DeckerDesign/mtg-commander-builder.git
 cd mtg-commander-builder
 ```
 
@@ -375,7 +375,7 @@ EDHREC's JSON API is unofficial. If it's down, the skill falls back to a hardcod
 
 ## Contributing
 
-This is an open template — swap out the example profile and ship your own. If you fix a bug or improve the Engine, open a PR. Keep the Engine/Profile split clean: nothing personal goes in `engine/`.
+This is an open template — clone it, swap out the example profile, and it's yours. If you fix a bug or improve the Engine, open a PR. Keep the Engine/Profile split clean: nothing personal goes in `engine/`.
 
 ---
 
