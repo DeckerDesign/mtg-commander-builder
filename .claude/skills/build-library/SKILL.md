@@ -13,16 +13,37 @@ content `brew` will select from. Build against **real target commanders**, not i
 Ask for 3-4 commanders the pilot wants to build (or is already running). These set the
 **target color identities and archetypes** that focus your suggestions.
 
-## Step 2 — Fetch EDHREC + Scryfall data for each
+## Step 2 — Ask about set scope
+
+Before searching, ask the pilot which sets to draw from. Present three options:
+
+**A) All Commander-legal cards** — broadest pool, no set restriction.
+
+**B) Specific sets** — pilot names them (e.g. `MH3, BLB, DSK`). Use Scryfall syntax:
+`(e:mh3 or e:blb or e:dsk)` as a filter appended to every search query.
+
+**C) Sets released after a date** — pilot gives a cutoff (e.g. "everything from 2024 onward").
+Browse https://scryfall.com/sets to translate that into set codes, then build the `(e:x or e:y ...)` filter.
+
+Store the resulting set filter as `SET_FILTER` (empty string for option A) and append it to
+every Scryfall query in steps below. Example with a filter:
+
+```
+python engine/fetch_scryfall.py --search "f:commander ci:UG o:landfall (e:dsk or e:blb or e:mh3)"
+```
+
+## Step 3 — Fetch EDHREC + Scryfall data for each commander
 
 For each commander:
 - `python engine/fetch_edhrec.py "<commander-name>"` → top cards by synergy score + salt score
-- `python engine/fetch_scryfall.py --search "f:commander ci:<colors> t:instant o:draw" ` → supplementary searches
-  for specific package slots
+  (EDHREC is not set-filtered — it reflects all-time popularity, not set scope. Use it to
+  confirm a suggested card is synergy-positive, but let `SET_FILTER` drive which cards you surface.)
+- `python engine/fetch_scryfall.py --search "f:commander ci:<colors> <package query> <SET_FILTER>"` →
+  candidates for each package slot
 
 Use these as the *source of candidates*, not the final answer. The pilot vets every card.
 
-## Step 3 — The iterative suggest-vet loop
+## Step 4 — The iterative suggest-vet loop
 
 Repeatedly **suggest unvetted candidate cards**, and have the user **vet each**
 (accept / edit / reject). Keep going until **the user judges the library rich enough to brew
