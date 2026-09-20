@@ -51,10 +51,22 @@ intake → commander-grill → build-library → brew
    - You'll need an [Anthropic account](https://console.anthropic.com) to log in.
 
 3. **PyYAML** — the only external Python dependency
+
+   **Mac (Homebrew Python):**
    ```bash
-   pip3 install pyyaml
+   pip3 install pyyaml --break-system-packages
    ```
-   On Windows: `pip install pyyaml`
+   **Windows:**
+   ```bash
+   pip install pyyaml
+   ```
+   **If you get a venv error on either platform:**
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   pip install pyyaml
+   ```
+   Then always run `source venv/bin/activate` before using the engine.
 
 4. **Git** (to clone the repo) — [git-scm.com](https://git-scm.com/downloads)
    - On Mac: already installed. Type `git --version` to check.
@@ -76,7 +88,7 @@ cd mtg-commander-builder
 ### 2. Install the one dependency
 
 ```bash
-pip3 install pyyaml
+pip3 install pyyaml --break-system-packages
 ```
 
 ### 3. Open it with Claude Code
