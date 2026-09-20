@@ -52,13 +52,35 @@ intake → commander-grill → build-library → brew
 
 3. **PyYAML** — the only external Python dependency
 
-   **Mac (Homebrew Python):**
+   **Mac (normal):**
    ```bash
    pip3 install pyyaml --break-system-packages
    ```
    **Windows:**
    ```bash
    pip install pyyaml
+   ```
+   **macOS 26 Tahoe / Python 3.14 — pip crashes on install?** There's a known bug in pip where it can't parse the macOS 26 version string. Run these two patches first, then install normally:
+   ```bash
+   sudo python3 -c "
+   path = '/opt/homebrew/lib/python3.14/site-packages/pip/_vendor/truststore/_macos.py'
+   with open(path) as f: content = f.read()
+   with open(path, 'w') as f: f.write(content.replace(
+       '_mac_version_info = tuple(map(int, _mac_version.split(\".\")))',
+       '_mac_version_info = tuple(map(int, (_mac_version or \"15.0.0\").split(\".\")))'
+   ))
+   print('Patched truststore!')
+   "
+   sudo python3 -c "
+   path = '/opt/homebrew/lib/python3.14/site-packages/pip/_vendor/packaging/tags.py'
+   with open(path) as f: content = f.read()
+   with open(path, 'w') as f: f.write(content.replace(
+       'version = cast(\"AppleVersion\", tuple(map(int, version_str.split(\".\")[:2])))',
+       'version = cast(\"AppleVersion\", tuple(map(int, (version_str or \"15.0\").split(\".\")[:2])))'
+   ))
+   print('Patched packaging!')
+   "
+   pip3 install pyyaml --break-system-packages
    ```
    **If you get a venv error on either platform:**
    ```bash
@@ -368,8 +390,9 @@ Full rationale in [docs/adr/](docs/adr/).
 
 **`ModuleNotFoundError: No module named 'yaml'`**
 ```bash
-pip3 install pyyaml
+pip3 install pyyaml --break-system-packages
 ```
+If that crashes with `ValueError: invalid literal for int() with base 10: ''`, you're on macOS 26 Tahoe with the pip version string bug — see the macOS 26 install steps in Prerequisites above.
 
 **`Scryfall HTTP 429: rate_limited`**
 You hit Scryfall's rate limit (10 req/s max). The engine auto-retries after 65 seconds. If it keeps happening, delete `.scryfall_cache/` and re-run — cached results don't count against the limit.
