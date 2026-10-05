@@ -37,12 +37,12 @@ Filtered to one package slot:
 python engine/scan_set.py MH3 decks/<dir> --package ramp --top 6
 ```
 
-## Step 2 — Present results
+## Step 2 — Present results with card images
 
-Show results grouped by package slot. For each card:
-- Name, CMC, price, EDHREC rank
-- Oracle text (truncated)
-- Why it fits: which archetype keyword it hits or which package gap it fills
+For each group of candidates, **publish an HTML artifact** showing a visual card gallery
+before asking the user to vet. Pull `image_uris.normal` from the Scryfall card object
+(double-faced cards: `card_faces[0].image_uris.normal`). Show up to 9 cards per gallery
+in a 3-column grid. Below each image show: name, CMC, price, and a one-line reason it fits.
 
 Cross-reference the deck's existing `gaps:` list in `deck_selection.yaml` — if a new
 card directly addresses a listed gap, call that out explicitly.

@@ -57,6 +57,35 @@ from** — no fixed count; they call it. Suggest across all package types:
 - **Wincons** (`profile/packages/wincons.yaml`) — finishers, combo pieces, game-ending threats.
 - **Commander synergies** — in `profile/commanders/<slug>.yaml` → `synergy_cards` list.
 
+### Card image gallery — always render this when presenting a batch
+
+Each time you present a group of candidates (even a single card), **publish an HTML artifact**
+showing a visual card gallery. Use the `image_uris.normal` field from the Scryfall card object
+(double-faced cards: `card_faces[0].image_uris.normal`). Layout per card:
+
+```
+[card image — normal size, ~223×310px]
+Name · CMC X · $Y.YY
+Type line
+(one-line oracle text summary)
+```
+
+Show up to 9 cards per gallery in a 3-column grid. If more than 9, split into multiple rounds.
+Publish the artifact before asking the user to vet — they review visually, then reply with
+card names to accept or reject.
+
+Example artifact structure (plain HTML, no framework):
+```html
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+  <div>
+    <img src="<image_uris.normal>" style="width:100%;border-radius:8px">
+    <b>Card Name</b> · CMC 2 · $0.50<br>
+    <small>Legendary Creature — Merfolk</small>
+  </div>
+  ...
+</div>
+```
+
 Between rounds, name the gaps you still see: "you have no answer to artifacts/enchantments
 in your green packages, and no protection for Aesi — want me to propose those?"
 

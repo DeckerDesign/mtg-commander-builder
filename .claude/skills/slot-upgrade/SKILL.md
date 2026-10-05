@@ -46,12 +46,12 @@ link the upgrade suggestion back to it:
 > Solemn Simulacrum is the weakest removal-adjacent card — here are 3 instant-speed
 > upgrades that would help that window."
 
-## Step 4 — Review gate
+## Step 4 — Review gate with card images
 
-Present results as proposals. For each suggested swap:
-- Name the card being cut and why it's weak
-- Name the replacement and why it's better
-- Show CMC, price, EDHREC rank side-by-side
+**Publish an HTML artifact** showing a side-by-side card gallery for each suggested swap:
+left column = card being cut, right column = proposed replacement(s). Pull `image_uris.normal`
+from the Scryfall card object (double-faced: `card_faces[0].image_uris.normal`). Below each
+image show: name, CMC, price, EDHREC rank, and the one-line reason it's better or worse.
 
 Stop. Wait for the user to accept, reject, or ask for alternatives.
 
